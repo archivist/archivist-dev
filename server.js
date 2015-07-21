@@ -9,7 +9,6 @@ var _ = require('lodash');
 
 var app = express();
 var port = process.env.PORT || 5000;
-
 var browserify = require("browserify");
 var babelify = require("babelify");
 var es6ify = require("es6ify");
@@ -22,16 +21,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "data")));
 
-
 // Backend
 // --------------------
 
 app.get('/writer/writer.js', function (req, res, next) {
-  // var startTime = Date.now();
   browserify({ debug: true, cache: false })
-    // .transform(es6ify)
-    // .transform(es6ify.configure(new RegExp('^'+path.join(__dirname, 'src')+'.+$')))
-    // .transform(babelify.configure({ only: [ path.join(__dirname, 'src') ] }))
     .add(path.join(__dirname, "writer", "writer.js"))
     .bundle()
     .on('error', function(err, data){

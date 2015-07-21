@@ -10,7 +10,6 @@
     "gulp-sass": "^2.0.3",
     "gulp-uglify": "^1.2.0",
     "through2": "^2.0.0",
-    "babelify": "^6.1.2",
     "body-parser": "^1.12.4",
     "browserify": "^10.2.4",
     "cheerio": "^0.19.0",
@@ -21,11 +20,6 @@
     "lodash": "3.3.1",
     "node-polyglot": "^0.4.1",
     "node-sass": "3.x"
-  },
-  "browserify": {
-    "transform": [
-      ["babelify", { "only": "src" }]
-    ]
   },
   "scripts": {
     "bundle": "gulp"
