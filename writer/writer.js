@@ -3,6 +3,8 @@
 // i18n
 require('./i18n/load');
 
+window.devMode = true;
+
 // Substance Journal
 // ---------------
 //
