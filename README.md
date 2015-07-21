@@ -1,11 +1,11 @@
-# Archivist Writer
+# Archivist Dev
 
 ## Install
 
 Clone the repository.
 
 ```bash
-$ git clone https://github.com/substance/archivist-writer.git
+$ git clone https://github.com/substance/archivist-dev.git
 ```
 
 Navigate to the source directory.
