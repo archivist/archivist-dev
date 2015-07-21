@@ -58,7 +58,9 @@ Backend.Prototype = function() {
     doc.subjects = subjects;
     this.doc = doc;
     window.doc = doc;
-    cb(null, doc);
+    setTimeout(function() {
+      cb(null, doc);
+    }, 1000);
   };
 
   this.saveDocument = function(doc, cb) {
