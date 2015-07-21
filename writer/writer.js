@@ -8,7 +8,6 @@ require('./i18n/load');
 //
 // Main entry point of the Substance Journal web client
 
-var _ = require("substance/helpers");
 var $$ = React.createElement;
 
 // Specify a backend
