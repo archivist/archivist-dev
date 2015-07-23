@@ -3,7 +3,7 @@
   "description": "Archivist Dev Setup",
   "repository": "https://github.com/substance/archivist-dev.git",
   "dependencies": {
-    "archivist-core": "substance/archivist-core#master"
+    "archivist-core": "substance/archivist-core#content-editor-refactor"
   },
   "devDependencies": {
     "babelify": "^6.1.3",
