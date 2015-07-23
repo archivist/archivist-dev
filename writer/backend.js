@@ -1,6 +1,6 @@
 var Substance = require("archivist-core").Substance;
 var Interview = require('archivist-core/interview');
-var EXAMPLE_DOC = require("../data/big_sample_doc");
+var EXAMPLE_DOC = require("../data/small_sample_doc");
 
 var ENTITIES = [
   // Prisons
@@ -58,9 +58,7 @@ Backend.Prototype = function() {
     doc.subjects = subjects;
     this.doc = doc;
     window.doc = doc;
-    setTimeout(function() {
-      cb(null, doc);
-    }, 1000);
+    cb(null, doc);
   };
 
   this.saveDocument = function(doc, cb) {
