@@ -11,7 +11,7 @@ $ git clone https://github.com/substance/archivist-dev.git
 Navigate to the source directory.
 
 ```bash
-$ cd archivist-writer
+$ cd archivist-dev
 ```
 
 Install via npm
