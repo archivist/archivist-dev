@@ -20,6 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // use static server
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "data")));
+app.use(express.static(path.join(__dirname, "node_modules/archivist-core/browser/styles")));
 
 // Backend
 // --------------------
@@ -34,6 +35,18 @@ app.get('/writer/writer.js', function (req, res, next) {
     })
     .pipe(res);
 });
+
+app.get('/browser/browser.js', function (req, res, next) {
+  browserify({ debug: true, cache: false })
+    .add(path.join(__dirname, "browser", "browser.js"))
+    .bundle()
+    .on('error', function(err, data){
+      console.error(err.message);
+      res.send('console.log("'+err.message+'");');
+    })
+    .pipe(res);
+});
+
 
 var handleError = function(err, res) {
   console.error(err);

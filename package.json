@@ -11,7 +11,6 @@
     "browserify": "^10.2.4",
     "cheerio": "^0.19.0",
     "ejs": "*",
-    "es6ify": "^1.6.0",
     "express": "*",
     "gulp": "^3.8.11",
     "gulp-sass": "^2.0.3",

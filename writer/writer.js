@@ -16,7 +16,7 @@ var $$ = React.createElement;
 // ---------------
 //
 
-var Backend = require("./backend");
+var Backend = require("../backend");
 var backend = new Backend();
 
 // Specify a notification service
@@ -24,7 +24,7 @@ var backend = new Backend();
 //
 // This is used for user notifications, displayed in the status bar
 
-var NotificationService = require("./notification_service");
+var NotificationService = require("../notification_service");
 var notifications = new NotificationService();
 
 // React Components

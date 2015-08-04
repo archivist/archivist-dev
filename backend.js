@@ -1,6 +1,6 @@
 var Substance = require("archivist-core").Substance;
 var Interview = require('archivist-core/interview');
-var EXAMPLE_DOC = require("../data/big_sample_doc");
+var EXAMPLE_DOC = require("./data/big_sample_doc");
 
 var ENTITIES = [
   // Prisons
