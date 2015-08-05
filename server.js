@@ -65,16 +65,16 @@ var handleError = function(err, res) {
   res.status(400).json(err);
 };
 
-var renderSass = function(cb) {
+var renderSass = function(moduleName, cb) {
   sass.render({
-    file: path.join(__dirname, "writer", "writer.scss"),
+    file: path.join(__dirname, moduleName, moduleName+".scss"),
     sourceMap: true,
-    outFile: 'writer.css',
+    outFile: moduleName+'.css'
   }, cb);
 };
 
 app.get('/writer/writer.css', function(req, res) {
-  renderSass(function(err, result) {
+  renderSass('writer', function(err, result) {
     if (err) return handleError(err, res);
     res.set('Content-Type', 'text/css');
     res.send(result.css);
@@ -82,7 +82,23 @@ app.get('/writer/writer.css', function(req, res) {
 });
 
 app.get('/writer/writer.css.map', function(req, res) {
-  renderSass(function(err, result) {
+  renderSass('writer', function(err, result) {
+    if (err) return handleError(err, res);
+    res.set('Content-Type', 'text/css');
+    res.send(result.map);
+  });
+});
+
+app.get('/reader/reader.css', function(req, res) {
+  renderSass('reader', function(err, result) {
+    if (err) return handleError(err, res);
+    res.set('Content-Type', 'text/css');
+    res.send(result.css);
+  });
+});
+
+app.get('/reader/reader.css.map', function(req, res) {
+  renderSass('reader', function(err, result) {
     if (err) return handleError(err, res);
     res.set('Content-Type', 'text/css');
     res.send(result.map);
