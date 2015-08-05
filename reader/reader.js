@@ -5,11 +5,6 @@ require('../i18n/load');
 
 window.devMode = true;
 
-// Substance Journal
-// ---------------
-//
-// Main entry point of the Substance Journal web client
-
 var $$ = React.createElement;
 
 // Specify a backend
@@ -32,14 +27,14 @@ var notifications = new NotificationService();
 //
 
 // Available contexts
-var ArchivistWriter = require("archivist-core/writer");
+var ArchivistReader = require("archivist-core/reader");
 
 // Top Level Application
 // ---------------
 //
 
-var WriterApp = React.createClass({
-  displayName: "WriterApp",
+var ReaderApp = React.createClass({
+  displayName: "ReaderApp",
 
   childContextTypes: {
     backend: React.PropTypes.object,
@@ -54,7 +49,7 @@ var WriterApp = React.createClass({
   },
 
   render: function() {
-    return $$(ArchivistWriter, {
+    return $$(ArchivistReader, {
       documentId: "sample"
     });
   }
@@ -64,7 +59,7 @@ var WriterApp = React.createClass({
 
 $(function() {
   React.render(
-    $$(WriterApp, {
+    $$(ReaderApp, {
       route: window.location.hash.slice(1)
     }),
     document.getElementById('container')

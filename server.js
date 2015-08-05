@@ -25,6 +25,18 @@ app.use(express.static(path.join(__dirname, "node_modules/archivist-core/browser
 // Backend
 // --------------------
 
+app.get('/reader/reader.js', function (req, res, next) {
+  browserify({ debug: true, cache: false })
+    .add(path.join(__dirname, "reader", "reader.js"))
+    .bundle()
+    .on('error', function(err, data){
+      console.error(err.message);
+      res.send('console.log("'+err.message+'");');
+    })
+    .pipe(res);
+});
+
+
 app.get('/writer/writer.js', function (req, res, next) {
   browserify({ debug: true, cache: false })
     .add(path.join(__dirname, "writer", "writer.js"))
