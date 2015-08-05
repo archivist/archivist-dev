@@ -58,7 +58,17 @@ Backend.Prototype = function() {
     // var subjects = new Interview.SubjectsModel(doc, SUBJECTS);
 
     this.getSubjects(function(err, subjects) {
-      // console.log(subjects);
+      doc.subjects = new Interview.SubjectsModel(doc, subjects);
+      this.doc = doc;
+      window.doc = doc;
+      cb(null, doc);
+    });
+  };
+
+  this.getDocumentWithResources = function(documentId, cb) {
+    var doc = Interview.fromJson(EXAMPLE_DOC);
+
+    this.getSubjects(function(err, subjects) {
       doc.subjects = new Interview.SubjectsModel(doc, subjects);
       this.doc = doc;
       window.doc = doc;

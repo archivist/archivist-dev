@@ -11,7 +11,7 @@ var $$ = React.createElement;
 // ---------------
 //
 
-var Backend = require("../backend");
+var Backend = require("../reader_backend");
 var backend = new Backend();
 
 // Specify a notification service
