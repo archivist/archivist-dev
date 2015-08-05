@@ -11,7 +11,8 @@ $(function() {
 
   var app = new ArchivistBrowser({
     backend: backend,
-    api_url: "https://elife-lens-indexer.herokuapp.com"
+    // api_url: "https://elife-lens-indexer.herokuapp.com"
+    api_url: "http://localhost:4002"
   });
   app.start();
 
