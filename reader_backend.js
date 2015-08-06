@@ -30,7 +30,6 @@ ReaderBackend.Prototype = function() {
         var doc = Interview.fromJson(result.document);
         doc.subjects = new Interview.SubjectsModel(doc, result.subjects);
         doc.entities = new Interview.EntitiesModel(result.entities);
-        console.log('ents', doc.entities);
         cb(null, doc);
       },
       error: function(err) {
@@ -38,12 +37,6 @@ ReaderBackend.Prototype = function() {
         cb(err.responseText);
       }
     });
-
-    // Backend.prototype.getDocument.call(this, documentId, function(err, doc) {
-    //   // enrich with entities
-    //   doc.entities = new Interview.EntitiesModel(ENTITIES);
-    //   cb(null, doc);
-    // });
   };
 };
 

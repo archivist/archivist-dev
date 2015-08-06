@@ -10,9 +10,7 @@ $(function() {
   // Injects itself into body
 
   var app = new ArchivistBrowser({
-    backend: backend,
-    // api_url: "https://elife-lens-indexer.herokuapp.com"
-    // api_url: "http://localhost:4002"
+    backend: backend
   });
   app.start();
 
