@@ -105,6 +105,22 @@ app.get('/reader/reader.css.map', function(req, res) {
   });
 });
 
+app.get('/browser/browser.css', function(req, res) {
+  renderSass('browser', function(err, result) {
+    if (err) return handleError(err, res);
+    res.set('Content-Type', 'text/css');
+    res.send(result.css);
+  });
+});
+
+app.get('/browser/browser.css.map', function(req, res) {
+  renderSass('browser', function(err, result) {
+    if (err) return handleError(err, res);
+    res.set('Content-Type', 'text/css');
+    res.send(result.map);
+  });
+});
+
 app.listen(port, function(){
   console.log("Lens running on port " + port);
   console.log("http://127.0.0.1:"+port+"/");
