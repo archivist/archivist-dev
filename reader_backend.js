@@ -21,13 +21,14 @@ ReaderBackend.Prototype = function() {
 
   this.getDocument = function(documentId, cb) {
     // Use predefined doc id for developing
-    documentId = '554e7662f10c3c030049f7ee';
+    documentId = '559d1453fb9e19e623c88a48';
     
     $.ajax({
       url: "http://ost.d4s.io/api/public/documents/"+documentId,
       dataType: 'json',
       success: function(result) {
         var doc = Interview.fromJson(result.document);
+        window.doc = doc;
         doc.subjects = new Interview.SubjectsModel(doc, result.subjects);
         doc.entities = new Interview.EntitiesModel(result.entities);
         cb(null, doc);
