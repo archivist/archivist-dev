@@ -21,7 +21,7 @@ ReaderBackend.Prototype = function() {
 
   this.getDocument = function(documentId, cb) {
     // Use predefined doc id for developing
-    documentId = '559d1453fb9e19e623c88a48';
+    documentId = '559bb2c0d5f7de2311b4e6f0';
     
     $.ajax({
       url: "http://ost.d4s.io/api/public/documents/"+documentId,
