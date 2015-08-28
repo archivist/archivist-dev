@@ -31,5 +31,6 @@
   "entity.type.toponym": "Locations",
   "entity.type.prison": "Prisons",
   "entity.type.person": "Persons",
-  "entity.type.definition": "Definitions"
+  "entity.type.definition": "Definitions",
+  "entity.unknown_name": "Unknown name"
 }

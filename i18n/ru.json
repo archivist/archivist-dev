@@ -31,5 +31,6 @@
   "entity.type.toponym": "География",
   "entity.type.prison": "Места заключения",
   "entity.type.person": "Персоналии",
-  "entity.type.definition": "Реалии"
+  "entity.type.definition": "Реалии",
+  "entity.unknown_name": "Название неизвестно"
 }
