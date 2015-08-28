@@ -27,5 +27,9 @@
   "panels.source": "Source",
   "panels.subjects": "Topics",
   "panels.entities": "Index",
-  "panels.info": "Info"
+  "panels.info": "Info",
+  "entity.type.toponym": "Locations",
+  "entity.type.prison": "Prisons",
+  "entity.type.person": "Persons",
+  "entity.type.definition": "Definitions"
 }

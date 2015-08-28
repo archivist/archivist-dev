@@ -27,5 +27,9 @@
   "panels.source": "Источник",
   "panels.subjects": "Путеводитель",
   "panels.entities": "Указатель",
-  "panels.info": "О респонденте"
+  "panels.info": "О респонденте",
+  "entity.type.toponym": "География",
+  "entity.type.prison": "Места заключения",
+  "entity.type.person": "Персоналии",
+  "entity.type.definition": "Реалии"
 }
