@@ -4,6 +4,7 @@
 require('../i18n/load');
 
 window.devMode = true;
+window.mediaServer = 'http://media.tastorona.su';
 
 var $$ = React.createElement;
 
