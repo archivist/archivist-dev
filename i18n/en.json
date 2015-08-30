@@ -35,5 +35,11 @@
   "entity.type.prison": "Prisons",
   "entity.type.person": "Persons",
   "entity.type.definition": "Definitions",
-  "entity.unknown_name": "Unknown name"
+  "entity.unknown_name": "Unknown name",
+  "browser.search_button": "Search",
+  "browser.search_placeholder": "Enter search terms",
+  "browser.clear_filters": "Clear Filters",
+  "browser.loading": "Loading documents...",
+  "browser.found": "documents found",
+  "browser.minutes": "min"
 }
