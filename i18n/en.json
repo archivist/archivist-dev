@@ -6,6 +6,7 @@
   "menu.emphasis": "Emphasis",
   "menu.strong": "Strong",
   "menu.timecode": "Timecode",
+  "menu.timecode_annotator": "Timecode Annotator",
   "menu.whitespace": "Whitespace cleaner",
   "menu.indentation": "Indentation cleaner",
   "menu.manage": "Manage",
