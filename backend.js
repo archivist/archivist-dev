@@ -84,7 +84,7 @@ Backend.Prototype = function() {
       url: "http://ost.d4s.io/api/public/subjects",
       dataType: 'json',
       success: function(subjects) {
-        cb(null, new Interview.SubjectsModel(null, subjects));
+        cb(null, subjects);
       },
       error: function(err) {
         console.error(err.responseText);
