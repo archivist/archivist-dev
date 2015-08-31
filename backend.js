@@ -79,18 +79,18 @@ Backend.Prototype = function() {
   };
 
   this.getSubjects = function(cb) {
-    cb(null, SUBJECTS.subjects);
-    // $.ajax({
-    //   url: "http://ost.d4s.io/api/subjects?page=1&sort_by=position&order=asc",
-    //   dataType: 'json',
-    //   success: function(subjects) {
-    //     cb(null, new Interview.SubjectsModel(doc, subjects));
-    //   },
-    //   error: function(err) {
-    //     console.error(err.responseText);
-    //     cb(err.responseText);
-    //   }
-    // });
+    //cb(null, SUBJECTS.subjects);
+    $.ajax({
+      url: "http://ost.d4s.io/api/public/subjects",
+      dataType: 'json',
+      success: function(subjects) {
+        cb(null, new Interview.SubjectsModel(null, subjects));
+      },
+      error: function(err) {
+        console.error(err.responseText);
+        cb(err.responseText);
+      }
+    });
   };
 
   // Used by Archivist Browser
