@@ -1,9 +1,9 @@
 {
   "name": "archivist-dev",
   "description": "Archivist Dev Setup",
-  "repository": "https://github.com/substance/archivist-dev.git",
+  "repository": "https://github.com/archivist/archivist-dev.git",
   "dependencies": {
-    "archivist-core": "substance/archivist-core#master"
+    "archivist-core": "archivist/archivist-core#master"
   },
   "devDependencies": {
     "babelify": "^6.1.3",
