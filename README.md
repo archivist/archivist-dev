@@ -5,7 +5,7 @@
 Clone the repository.
 
 ```bash
-$ git clone https://github.com/substance/archivist-dev.git
+$ git clone https://github.com/archivist/archivist-dev.git
 ```
 
 Navigate to the source directory.
